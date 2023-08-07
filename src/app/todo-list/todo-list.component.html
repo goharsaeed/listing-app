@@ -1,0 +1,30 @@
+<!-- src/app/todo-list/todo-list.component.html -->
+<div class="todo-list-container">
+    <h2>Todo List</h2>
+  
+    <div class="filters">
+      <label for="descriptionFilter">Filter by Description:</label>
+      <input type="text" id="descriptionFilter" formControl="descriptionFilter" (input)="onDescriptionFilterChange()">
+  
+      <label for="priorityFilter">Filter by Priority:</label>
+      <input type="text" id="priorityFilter" formControl="priorityFilter" (input)="onPriorityFilterChange()">
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Due Date</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of filteredTodos">
+          <td>{{ todo.description }}</td>
+          <td>{{ todo.dueDate | date }}</td>
+          <td>{{ todo.priority }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

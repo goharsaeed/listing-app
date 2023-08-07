@@ -1,0 +1,16 @@
+<div class="todo-form-container">
+    <h2>Add New Todo</h2>
+    <form (ngSubmit)="saveTodo()">
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" formControl="newTodo.description" required>
+  
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate" formControl="newTodo.dueDate" required>
+  
+      <label for="priority">Priority:</label>
+      <input type="number" id="priority" name="priority" formControl="newTodo.priority" required>
+  
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  
